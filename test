@@ -1,0 +1,10 @@
+require './twitter_sandbox'
+require './sentiment_analyzer'
+
+twitter = Twitter_Scraper.new
+analyzer = Analyzer.new
+
+#analyzer.monkey twitter.scrape_tweets"The Vanguard Group"
+#analyzer.monkey twitter.see_recent_mentions
+analyzer.analyze_sentiment twitter.scrape_tweets"The Vanguard Group", 10
+#analyzer.analyze_sentiment twitter.see_recent_mentions
